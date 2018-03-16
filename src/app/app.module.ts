@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './component/app-routing.module';
+import { AppRoutingModule } from './components/app-routing.module';
 
-import { APP_COMPONENTS, AppComponent } from './component/index';
-import { SHARED_COMPONENTS } from './component/shared/index';
+import { APP_COMPONENTS, AppComponent } from './components/index';
+import { SHARED_COMPONENTS } from './components/shared/index';
 
 @NgModule({
   declarations: [
