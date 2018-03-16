@@ -3,14 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './component/app-routing.module';
 
-import { AppComponent } from './component/app.component';
-import { HomeComponent } from './component/home/home.component';
-
+import { APP_COMPONENTS, AppComponent } from './component/index';
+import { SHARED_COMPONENTS } from './component/shared/index';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent
+    ...APP_COMPONENTS,
+    ...SHARED_COMPONENTS
   ],
   imports: [
     BrowserModule,
