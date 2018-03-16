@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeRoutes } from './home/home.routes';
 import { AdminRoutes } from './admin/admin.routes';
+import { TaxSlabRoutes } from './taxSlab/taxSlab.routes';
 
 const routes: Routes = [
   {
@@ -11,7 +12,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   ...HomeRoutes,
-  ...AdminRoutes
+  ...AdminRoutes,
+  ...TaxSlabRoutes
 ];
 
 @NgModule({
