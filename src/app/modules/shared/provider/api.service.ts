@@ -11,7 +11,7 @@ export class ApiService {
     get(object: any, methodName: string): Observable<any> {
         let header = this.initHeaders();
         let options = new RequestOptions({ headers: header, method: 'get' });
-        return this.http.get('Config.ENVIRONMENT().API' + methodName, options)
+        return this.http.get('http://localhost:56614/' + methodName, options)
             .map(res => {
                 return res.json();
             })
@@ -22,7 +22,7 @@ export class ApiService {
         let header = this.initHeaders();
         let options = new RequestOptions({ headers: header, method: 'post' });
         let body = JSON.stringify(object);
-        return this.http.post('Config.ENVIRONMENT().API' + methodName, body, options)
+        return this.http.post('http://localhost:56614/' + methodName, body, options)
             .map(res => {
                 return res.json();
             })

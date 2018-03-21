@@ -1,5 +1,6 @@
+import { Observable } from 'rxjs/Observable';
 import { combineReducers } from '@ngrx/store';
-import { ActionReducerMap } from '@ngrx/store';
+import { ActionReducer, ActionReducerMap } from '@ngrx/store';
 
 import * as fromTaxSlab from '../taxSlab/index';
 
@@ -7,15 +8,9 @@ export interface IAppState {
     tax: fromTaxSlab.ITaxSlabState;
 }
 
-export const reducers: ActionReducerMap<IAppState> = {
+export const appReducers: ActionReducerMap<IAppState> = {
     tax: fromTaxSlab.taxSlabReducer,
 };
-
-// const rootReducer = combineReducers(reducers);
-
-// export function AppReducer(state: any, action: any) {
-//   return rootReducer(state, action);
-// }
 
 export function getTaxSlabs(state: IAppState) {
     return state.tax;

@@ -18,7 +18,6 @@ export class TaxSlabViewComponent implements OnInit, OnDestroy {
     private _ngUnsubscribe: Subject<void> = new Subject<void>();
 
     constructor(private store: Store<fromStore.IAppState>) {
-        debugger;
     }
 
     ngOnInit() {
