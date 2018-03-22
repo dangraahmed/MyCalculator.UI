@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeRoutes } from './home/home.routes';
-import { AdminRoutes } from './admin/admin.routes';
-import { TaxSlabRoutes } from './taxSlab/taxSlab.routes';
+import { HomeRoutes } from '../../components/home/home.routes';
+import { AdminRoutes } from '../../components/admin/admin.routes';
+import { TaxSlabRoutes } from '../../components/taxSlab/taxSlab.routes';
 
 const routes: Routes = [
   {

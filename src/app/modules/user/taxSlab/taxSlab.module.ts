@@ -1,10 +1,13 @@
 import { NgModule, Optional, SkipSelf, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { EffectsModule } from '@ngrx/effects';
 
 // app
 import { TAX_SLAB_PROVIDERS } from './services/index';
+import { TaxSlabEffects } from './effects/index';
 
 @NgModule({
   imports: [
+    EffectsModule.forRoot([TaxSlabEffects]),
   ],
   providers: [
     ...TAX_SLAB_PROVIDERS

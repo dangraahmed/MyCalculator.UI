@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Rx';
 
-import * as fromStore from '../../../modules/ngrx/index';
-import { TaxSlab } from '../../../modules/taxSlab/actions/index';
-import { ITaxSlabState } from '../../../modules/taxSlab/index';
+import * as fromStore from '../../../modules/shared/ngrx/index';
+import { TaxSlab } from '../../../modules/user/taxSlab/actions/index';
+import { ITaxSlabState } from '../../../modules/user/taxSlab/index';
 
 @Component({
     moduleId: module.id,
