@@ -3,7 +3,7 @@ import { HOME_COMPONENTS } from './home/index';
 import { ADMIN_COMPONENTS } from './admin/index';
 
 
-export const APP_COMPONENTS: any[] = [
+export const USER_COMPONENTS: any[] = [
   AppComponent,
   ...HOME_COMPONENTS,
   ...ADMIN_COMPONENTS

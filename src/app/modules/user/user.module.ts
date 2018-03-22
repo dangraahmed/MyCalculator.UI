@@ -1,4 +1,4 @@
-import { NgModule, Optional, SkipSelf, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { TaxSlabModule } from './taxSlab/index';
 
@@ -8,10 +8,4 @@ import { TaxSlabModule } from './taxSlab/index';
   ]
   
 })
-export class UserModule { 
-  constructor(@Optional() @SkipSelf() parentModule: UserModule) {
-    if (parentModule) {
-      throw new Error('UserModule already loaded; Import in root module only.');
-    }
-  }
-}
+export class UserModule { }
