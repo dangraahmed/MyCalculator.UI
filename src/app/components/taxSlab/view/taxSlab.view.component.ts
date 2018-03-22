@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Rx';
 
@@ -17,7 +18,8 @@ export class TaxSlabViewComponent implements OnInit, OnDestroy {
     public listOfTaxSlab: ITaxSlabState;
     private _ngUnsubscribe: Subject<void> = new Subject<void>();
 
-    constructor(private store: Store<fromStore.IAppState>) {
+    constructor(private store: Store<fromStore.IAppState>
+        , private router: Router) {
     }
 
     ngOnInit() {
@@ -35,9 +37,9 @@ export class TaxSlabViewComponent implements OnInit, OnDestroy {
         this.store.dispatch(new TaxSlab.SelectTaxSlab(selectedTaxSlabId));
 
         if (action === 'view') {
-            // this.routerext.navigate(['/admin/taxSlab/viewDetail']);
+            this.router.navigate(['/admin/taxSlab/viewDetail']);
         } else if (action === 'edit') {
-            // this.routerext.navigate(['/admin/taxSlab/addEdit']);
+            this.router.navigate(['/admin/taxSlab/addEdit']);
         } else if (action === 'delete') {
             this.store.dispatch(new TaxSlab.DeleteTaxSlabAction(selectedTaxSlabId));
         }
