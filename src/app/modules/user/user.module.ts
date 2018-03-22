@@ -11,7 +11,7 @@ import { TaxSlabModule } from './taxSlab/index';
 export class UserModule { 
   constructor(@Optional() @SkipSelf() parentModule: UserModule) {
     if (parentModule) {
-      throw new Error('TaxSlabModule already loaded; Import in root module only.');
+      throw new Error('UserModule already loaded; Import in root module only.');
     }
   }
 }
