@@ -1,20 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './modules/core/core.module';
+import { SharedModule } from './modules/shared/shared.module';
+import { UserModule } from './modules/user/user.module';
 
-import { AppComponent } from './app.component';
 
+
+import { USER_COMPONENTS, AppComponent } from './components/index';
+import { SHARED_COMPONENTS } from './components/shared/index';
 
 @NgModule({
   declarations: [
-    AppComponent
+    ...USER_COMPONENTS,
+    ...SHARED_COMPONENTS
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    CoreModule,
+    SharedModule,
+    UserModule
   ],
-  providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
