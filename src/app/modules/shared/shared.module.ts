@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ApiService } from './provider/api.service';
+import { AuthGuard } from './gards/auth.guard';
 
 @NgModule({
     imports: [
@@ -10,7 +11,10 @@ import { ApiService } from './provider/api.service';
     exports: [
         AppRoutingModule
     ],
-    providers: [ApiService],
+    providers: [
+        ApiService,
+        AuthGuard
+    ],
 
 })
 export class SharedModule {
