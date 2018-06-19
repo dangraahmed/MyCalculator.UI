@@ -20,6 +20,7 @@ export class LoginService {
         }
         return this.http.post(environment.apiUrl + 'tokenAuth/getAuthToken', user)
             .map(res => {
+                debugger;
                 return res.json();
             })
             .catch(this.handleError);

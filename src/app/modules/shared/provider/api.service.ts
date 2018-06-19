@@ -30,7 +30,7 @@ export class ApiService {
     }
 
     private initHeaders(): Headers {
-        let token = 'this.storage.getItem(StorageKey.USER_TOKEN)';
+        let token = this.getLocalToken();
         var headers = new Headers();
         if (token !== null) {
             headers.append('Authorization', token);
@@ -39,6 +39,11 @@ export class ApiService {
         headers.append('Accept', 'application/json');
         headers.append('Content-Type', 'application/json');
         return headers;
+    }
+
+    private getLocalToken(): string {
+        return null;
+        // return JSON.parse(sessionStorage.getItem('currentUser')).token;
     }
 
     private handleError(error: any): Observable<any> {
