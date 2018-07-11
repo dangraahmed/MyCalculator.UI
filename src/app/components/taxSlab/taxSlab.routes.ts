@@ -5,6 +5,7 @@ import { TaxSlabAddEditComponent } from './addEdit/taxSlab.add.edit.component';
 export const TaxSlabRoutes: Array<any> = [
   {
     path: 'taxSlab',
+    loadChildren: '../../../app/modules/user/taxSlab/taxSlab.module#TaxSlabModule',
     children: [
       { path: 'view', component: TaxSlabViewComponent },
       { path: 'viewDetail', component: TaxSlabViewDetailComponent },
