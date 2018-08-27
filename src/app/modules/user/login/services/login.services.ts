@@ -15,12 +15,13 @@ export class LoginService {
 
     login(username: string, password: string): Observable<any> {
         var user = {
-            userId: username,
+            Id: 1, 
+            UserName: "a", 
+            UserId: username,
             userPassword: password
         }
-        return this.http.post(environment.apiUrl + 'tokenAuth/getAuthToken', user)
+        return this.http.post(environment.apiUrl + 'Login/Login', user)
             .map(res => {
-                debugger;
                 return res.json();
             })
             .catch(this.handleError);

@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
         this.authenticationService.login(this.model.username, this.model.password)
             .subscribe(result => {
                 if (result) {
-                    sessionStorage.setItem('currentUser', JSON.stringify({ username: this.model.username, token: result.data.accessToken, tokenType: result.data.tokeyType }));
+                    sessionStorage.setItem('currentUser', JSON.stringify({ username: this.model.username, token: result.token }));
                     this.router.navigate(['/']);
                 } else {
                     this.error = 'Username or password is incorrect';

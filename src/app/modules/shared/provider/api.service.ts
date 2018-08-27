@@ -33,7 +33,7 @@ export class ApiService {
         let token = this.getLocalToken();
         var headers = new Headers();
         if (token !== null) {
-            headers.append('Authorization', token);
+            headers.append('Authorization', "Bearer " + token);
         }
 
         headers.append('Accept', 'application/json');
@@ -42,8 +42,7 @@ export class ApiService {
     }
 
     private getLocalToken(): string {
-        return null;
-        // return JSON.parse(sessionStorage.getItem('currentUser')).token;
+        return JSON.parse(sessionStorage.getItem('currentUser')).token;
     }
 
     private handleError(error: any): Observable<any> {
