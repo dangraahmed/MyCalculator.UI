@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
             .subscribe(result => {
                 if (result) {
                     sessionStorage.setItem('currentUser', JSON.stringify({ username: this.model.username, token: result.token }));
-                    this.router.navigate(['/']);
+                    this.router.navigate(['/admin']);
                 } else {
                     this.error = 'Username or password is incorrect';
                     this.loading = false;

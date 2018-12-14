@@ -20,7 +20,7 @@ export class LoginService {
             UserId: username,
             userPassword: password
         }
-        return this.http.post(environment.apiUrl + 'Login/Login', user)
+        return this.http.post(environment.apiUrl + 'Users/authenticate', user)
             .map(res => {
                 return res.json();
             })
